@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
-// Get the argument from command line
-const x = parseInt(process.argv[2], 10);
+const x = parseInt(process.argv[2]);
 
-// Check if the argument is a valid integer
-if (isNaN(x) || x < 1) {
-  console.log("Missing number of occurrences");
+if (isNaN(x)) {
+  console.log('Missing number of occurrences');
 } else {
-  console.log("C is fun\n".repeat(x).trim());
+  for (let i = 0; i < x; i++) {
+    console.log('C is fun');
+  }
 }
