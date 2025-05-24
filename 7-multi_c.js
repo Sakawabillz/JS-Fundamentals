@@ -1,13 +1,12 @@
-const number = parseInt(process.argv[2]);
+const arg = process.argv[2];
+const count = Number(arg);
 
-if (isNaN(number) || number <= 0) {
+if (!Number.isInteger(count) || count <= 0) {
   console.log("Missing number of occurrences");
 } else {
-  let i = 0;
   let output = "";
-  while (i < number) {
+  for (let i = 0; i < count; i++) {
     output += "C is fun\n";
-    i++;
   }
   console.log(output.trim());
 }
